@@ -1,0 +1,9 @@
+<div id="drinks-block">
+  <div class="drink-item" *ngFor="let drink of drinksArr">
+    <div class="item-img-block">
+      <img class="item-img" src={{drink.img}}>
+    </div>
+    <div class="item-name">{{drink.name}}</div>
+    <div class="item-price">{{drink.price}}</div>
+  </div>
+</div>

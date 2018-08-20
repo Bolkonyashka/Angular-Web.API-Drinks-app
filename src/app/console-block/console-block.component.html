@@ -1,37 +1,46 @@
 <div id="console-block">
   <div id="console-screen">
-    riri
+    <div class="info-block" id="input">Вы внесли {{vendingModel.currentInput}} рублей</div>
+    <div class="info-block" id="selected-drinks-label">Выбранные напитки:</div>
+    <div class="info-block" id="selected-drink">Нюка кола</div>
+    <div class="info-block" id="price">
+      <div>
+        Стоимость: {{vendingModel.currentPrice}} рублей
+      </div> 
+      <div>
+        Сдача: {{vendingModel.currentOutput}} рублей
+      </div>
+    </div>
   </div>
   <div id="console-buttons">
     <div id="pay-buttons">
-      <div class="pay-button">
+      <button class="pay-button" (click)="moneyInput(1)" [disabled]="vendingModel.blocked1">
         <div class="button-text">
           1
         </div>
-      </div>
-      <div class="pay-button">
+      </button>
+      <button class="pay-button" (click)="moneyInput(2)" [disabled]="vendingModel.blocked2">
         <div class="button-text">
             2
         </div>
-      </div>
-      <div class="pay-button">
+      </button>
+      <button class="pay-button"  (click)="moneyInput(5)" [disabled]="vendingModel.blocked5">
         <div class="button-text">
             5
         </div>
-      </div>
-      <div class="pay-button">
+      </button>
+      <button class="pay-button"  (click)="moneyInput(10)" [disabled]="vendingModel.blocked10">
         <div class="button-text">
             10
         </div>
-      </div>
+      </button>
     </div>
     <div id="buy-buttons">
-      <div class="buy-button">
+      <button class="buy-button">
         <div class="button-text">
             Купить
         </div>
-      </div>
-        
+      </button>  
     </div>
   </div>
 </div>
